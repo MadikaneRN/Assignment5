@@ -6,27 +6,30 @@ import java.util.Date;
  * Created by Scorpian on 2016-04-01.
  */
 public class Statement {
-    private Date currentDate;
+    
     private String details;
-
+	private String weekandDay;
+	//might have toString of the relevant classes ie loan balance and account;
     public Statement(Builder builder) {
 
         details = builder.details;
-        currentDate = builder.currentDate;
+        weekandDay = builder.weekandDay;
 
     }
 
-    public Date getCurrentDate() {
-        return currentDate;
-    }
-
+   
+	
+	public String getWeekandDay()
+	{	
+		return weekandDay;
+	}
     public String getDetails() {
         return details;
     }
     public static class Builder {
 
         //Equivalent to setters
-        private Date currentDate;
+        private String weekandDay;
         private String details;
 
 
@@ -36,8 +39,8 @@ public class Statement {
             this.details = details; //compalsury
         }
 
-        public Builder currentDate(Date currentDate) {
-            this.currentDate = currentDate;
+        public Builder weekandDay(String weekandDay) {
+            this.weekandDay = weekandDay;
             return this;
         }
 
@@ -46,7 +49,7 @@ public class Statement {
         public Builder copy(Statement statement){
 
             this.details = statement.getDetails();
-            this.currentDate = statement.getCurrentDate();
+            this.weekandDay = statement.getWeekandDay();
             return this;
         }
 

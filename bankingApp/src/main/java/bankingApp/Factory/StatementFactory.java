@@ -12,7 +12,7 @@ public class StatementFactory {
     public static Statement getStatement(String details, Date currentDate)
     {
         Statement myStatement = new Statement.Builder(details) // change name to conivinient name
-                .currentDate(currentDate)
+                .weekandDay(weekandDay)
                 .build();
 
         return myStatement;

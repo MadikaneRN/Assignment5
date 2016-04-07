@@ -12,6 +12,7 @@ public class TestSingleton {
     private SingletonClient singletonClient;
     private SingletonClient singletonClientCopy;
 
+
     @Before
     public void setUp() throws Exception {
 

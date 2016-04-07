@@ -40,8 +40,6 @@ public class Account {
 
 
 
-
-
     public static class Builder {
 
         //Equivalent to setters
